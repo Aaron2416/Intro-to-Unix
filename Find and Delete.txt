@@ -1,0 +1,8 @@
+Find and Delete
+find /sandbox -type f -name "*.tmp" -exec rm -f {} \;
+Find HTML
+find / -type f -name "*.html" -exec grep -l "oncology" {} \; > oncology-pages
+Find HTML Files with "radiology" String
+find / -type f -name "*.html" -exec grep -l "radiology" {} \; > radiology-pages
+Compare the Two
+diff oncology-pages radiology-pages > differences.txt
